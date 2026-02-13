@@ -1,6 +1,16 @@
 name: 🐳 Build & Push Docker Image
 
 on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'test env'
+        required: true
+        default: 'test'
+        type: choice
+        options:
+          - test
+          - staging
   push:
     branches: [main]
     tags: ["v*"]
