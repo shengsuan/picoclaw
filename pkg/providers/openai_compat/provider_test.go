@@ -334,7 +334,7 @@ func TestNormalizeModel_UsesAPIBase(t *testing.T) {
 	if got := normalizeModel(
 		"shengsuanyun/deepseek/deepseek-v3.2-exp",
 		"https://router.shengsuanyun.com/api/v1",
-	); got != "deepseek/deepseek-v3.2-exp" {
+	); got != "shengsuanyun/deepseek/deepseek-v3.2-exp" {
 		t.Fatalf("normalizeModel(shengsuanyun) = %q, want %q", got, "deepseek/deepseek-v3.2-exp")
 	}
 }
